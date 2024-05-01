@@ -29,7 +29,7 @@ STDLIBVERSION_CLANG = -stdlib=libc++ # Clang's version; not present on default A
 STDLIBVERSION_GNU =   # blank on purpose; default GNU library
 STDLIBVERSION = $(STDLIBVERSION_GNU)
 WARNINGS = -pedantic -Wall -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable
-CXXFLAGS = $(CS400) $(STDVERSION) $(STDLIBVERSION) -g -O0 $(WARNINGS) -MMD -MP -msse2 -c
+CXXFLAGS = $(CS400) $(STDVERSION) $(STDLIBVERSION) -g -O0 $(WARNINGS) -MMD -MP -c
 LDFLAGS = $(CS400) $(STDVERSION) $(STDLIBVERSION) -lpthread
 ASANFLAGS = -fsanitize=address -fno-omit-frame-pointer
 
